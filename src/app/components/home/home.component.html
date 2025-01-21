@@ -1,0 +1,16 @@
+<po-page-default p-title="Despesas">
+  <po-table [p-columns]="[
+      { label: 'ID', property: 'id' },
+      { label: 'Código da Despesa', property: 'cod_desp' },
+      { label: 'Código Unidade', property: 'Unidade' },
+      { label: 'Descrição', property: 'desc_desp' },
+      { label: 'Tipo da Despesa', property: 'tp_desp' },
+      { label: 'Valor Unitário', property: 'valor_unit' }
+    ]" [p-items]="despesas" [p-actions]="actions">
+  </po-table>
+
+  <div class="pagination-controls">
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage <= 1">Anterior</button>
+    <button (click)="goToPage(currentPage + 1)" [disabled]="!hasNext">Próxima</button>
+  </div>
+</po-page-default>

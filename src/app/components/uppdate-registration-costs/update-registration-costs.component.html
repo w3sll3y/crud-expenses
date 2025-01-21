@@ -1,0 +1,25 @@
+<po-page-default p-title="Atualizar Despesa">
+  <form (ngSubmit)="updateDespesa()" #despesaForm="ngForm">
+    <po-input name="cod_desp" [(ngModel)]="despesa.cod_desp" p-label="Código da Despesa" p-required="true">
+    </po-input>
+
+    <po-input name="Unidade" [(ngModel)]="despesa.Unidade" p-label="Unidade" p-required="true">
+    </po-input>
+
+    <po-input name="desc_desp" [(ngModel)]="despesa.desc_desp" p-label="Descrição" p-required="true">
+    </po-input>
+
+    <po-select name="tp_desp" [ngModel]="despesa.tp_desp" p-label="Tipo de Despesa" p-required="true" [p-options]="[ 
+        { label: 'Valor unitário', value: 1 },
+        { label: 'Valor Total', value: 2 }
+      ]">
+    </po-select>
+
+    <po-input name="valor_unit" [(ngModel)]="despesa.valor_unit" p-label="Valor Unitário" p-required="true"
+      type="number">
+    </po-input>
+
+    <po-button p-label="Atualizar" (p-click)="updateDespesa()" [p-disabled]="!despesaForm.valid">
+    </po-button>
+  </form>
+</po-page-default>

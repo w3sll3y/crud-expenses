@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+body>app-root>div>po-page-default>po-page>div>po-page-content>div>app-home>po-page-default>po-page>div {
+  margin: 0 !important;
+}
+
+body>app-root>div>po-page-default>po-page>div>po-page-content>div>app-registration-costs>po-page-default>po-page>div {
+  margin: 0 !important;
+}
